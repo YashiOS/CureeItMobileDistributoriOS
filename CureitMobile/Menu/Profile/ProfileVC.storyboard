@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ProfileVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ProfileVC" customModule="CureitMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigProfile" translatesAutoresizingMaskIntoConstraints="NO" id="jhu-ES-oEO">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="r9F-om-P4n"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnJ-2P-edb">
+                                <rect key="frame" x="15" y="69" width="69.333333333333329" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                    <color key="baseForegroundColor" red="0.039215686270000001" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qCJ-Zr-tpd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF6-5G-Oqx">
+                                <rect key="frame" x="169.33333333333334" y="75.333333333333329" width="54.333333333333343" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePhotosample" translatesAutoresizingMaskIntoConstraints="NO" id="asI-q4-S9w">
+                                <rect key="frame" x="30" y="224" width="139" height="189"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="189" id="7jT-Tu-nip"/>
+                                    <constraint firstAttribute="width" constant="139" id="y1K-oV-vlW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="AppBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vF6-5G-Oqx" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="0FL-Hc-CbB"/>
+                            <constraint firstItem="jhu-ES-oEO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="2og-Xh-mcj"/>
+                            <constraint firstItem="vF6-5G-Oqx" firstAttribute="centerY" secondItem="wnJ-2P-edb" secondAttribute="centerY" id="89l-dE-2vJ"/>
+                            <constraint firstItem="jhu-ES-oEO" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="8Bt-bx-Gsu"/>
+                            <constraint firstItem="wnJ-2P-edb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="Bxr-0c-VXE"/>
+                            <constraint firstItem="asI-q4-S9w" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="H6t-cp-GA2"/>
+                            <constraint firstItem="asI-q4-S9w" firstAttribute="top" secondItem="wnJ-2P-edb" secondAttribute="bottom" constant="120.67" id="V7U-GG-h97"/>
+                            <constraint firstItem="jhu-ES-oEO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="gcK-Ue-CHc"/>
+                            <constraint firstItem="vF6-5G-Oqx" firstAttribute="leading" secondItem="wnJ-2P-edb" secondAttribute="trailing" constant="85" id="lgX-HX-zVm"/>
+                            <constraint firstItem="wnJ-2P-edb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="vAR-2I-H1I"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <image name="bigProfile" width="375" height="281"/>
+        <image name="profilePhotosample" width="120" height="160"/>
+        <namedColor name="AppBackgroundColor">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

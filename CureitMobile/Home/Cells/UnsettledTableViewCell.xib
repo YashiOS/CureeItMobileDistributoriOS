@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UnsettledTableViewCell" rowHeight="311" id="KGk-i7-Jjw" customClass="UnsettledTableViewCell" customModule="CureitMobile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="310"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="310"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lim-CR-pGa">
+                        <rect key="frame" x="0.0" y="2" width="348" height="306"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order#: 2234553" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZ9-iu-fKs">
+                                <rect key="frame" x="10" y="5" width="155" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Total: ₹240" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCc-8w-T6Q">
+                                <rect key="frame" x="200.33333333333337" y="7.3333333333333339" width="137.66666666666663" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" red="0.039215686270000001" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uP4-Bt-1wz">
+                                <rect key="frame" x="10" y="34" width="328" height="262"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="uP4-Bt-1wz" secondAttribute="bottom" constant="10" id="6Cj-Mg-Nt3"/>
+                            <constraint firstAttribute="trailing" secondItem="NCc-8w-T6Q" secondAttribute="trailing" constant="10" id="KxH-lE-Qag"/>
+                            <constraint firstItem="uP4-Bt-1wz" firstAttribute="top" secondItem="iZ9-iu-fKs" secondAttribute="bottom" constant="5" id="LK4-Cd-s7r"/>
+                            <constraint firstItem="uP4-Bt-1wz" firstAttribute="leading" secondItem="Lim-CR-pGa" secondAttribute="leading" constant="10" id="SYa-2a-WjO"/>
+                            <constraint firstItem="iZ9-iu-fKs" firstAttribute="top" secondItem="Lim-CR-pGa" secondAttribute="top" constant="5" id="Xjq-7L-nhD"/>
+                            <constraint firstAttribute="trailing" secondItem="uP4-Bt-1wz" secondAttribute="trailing" constant="10" id="gNu-TB-lnv"/>
+                            <constraint firstItem="NCc-8w-T6Q" firstAttribute="centerY" secondItem="iZ9-iu-fKs" secondAttribute="centerY" id="jDL-f6-eFJ"/>
+                            <constraint firstItem="iZ9-iu-fKs" firstAttribute="leading" secondItem="Lim-CR-pGa" secondAttribute="leading" constant="10" id="r0S-IU-fT6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.9529411792755127" green="0.9529411792755127" blue="0.9529411792755127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Lim-CR-pGa" secondAttribute="bottom" constant="2" id="F5E-xV-SSX"/>
+                    <constraint firstItem="Lim-CR-pGa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="K72-NU-VYQ"/>
+                    <constraint firstAttribute="trailing" secondItem="Lim-CR-pGa" secondAttribute="trailing" id="MM0-fG-goS"/>
+                    <constraint firstItem="Lim-CR-pGa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="n2z-Lq-gE7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="tableView" destination="uP4-Bt-1wz" id="AXa-Eg-zws"/>
+            </connections>
+            <point key="canvasLocation" x="61.068702290076331" y="80.281690140845072"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

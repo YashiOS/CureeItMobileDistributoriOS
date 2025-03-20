@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IncomeTableViewCell" id="KGk-i7-Jjw" customClass="IncomeTableViewCell" customModule="CureitMobile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-dz-IC2">
+                        <rect key="frame" x="0.0" y="5" width="320" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order#: 2234553" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFh-gS-SLT">
+                                <rect key="frame" x="5.0000000000000071" y="2" width="127.66666666666669" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Total: ₹200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGu-13-fyy">
+                                <rect key="frame" x="195" y="9.3333333333333357" width="115" height="15.666666666666664"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.49803921568627452" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AGu-13-fyy" firstAttribute="centerY" secondItem="VFh-gS-SLT" secondAttribute="centerY" id="5OG-fx-Hdx"/>
+                            <constraint firstAttribute="trailing" secondItem="AGu-13-fyy" secondAttribute="trailing" constant="10" id="H26-Hv-oB9"/>
+                            <constraint firstItem="VFh-gS-SLT" firstAttribute="leading" secondItem="O5a-dz-IC2" secondAttribute="leading" constant="5" id="UfJ-Og-iYR"/>
+                            <constraint firstAttribute="bottom" secondItem="VFh-gS-SLT" secondAttribute="bottom" constant="2" id="Voy-k0-Sxu"/>
+                            <constraint firstItem="VFh-gS-SLT" firstAttribute="top" secondItem="O5a-dz-IC2" secondAttribute="top" constant="2" id="jy1-oH-Ju8"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="AppBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="O5a-dz-IC2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="51f-wT-xNs"/>
+                    <constraint firstAttribute="trailing" secondItem="O5a-dz-IC2" secondAttribute="trailing" id="6zN-h8-mXD"/>
+                    <constraint firstItem="O5a-dz-IC2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7eg-GQ-Yzk"/>
+                    <constraint firstAttribute="bottom" secondItem="O5a-dz-IC2" secondAttribute="bottom" constant="5" id="LDE-NQ-jV3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mainView" destination="O5a-dz-IC2" id="KIt-vA-0dy"/>
+                <outlet property="orderIDLbl" destination="VFh-gS-SLT" id="F62-oA-0QO"/>
+                <outlet property="orderTotalLbl" destination="AGu-13-fyy" id="QhJ-y5-Pwu"/>
+            </connections>
+            <point key="canvasLocation" x="95" y="-12"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppBackgroundColor">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

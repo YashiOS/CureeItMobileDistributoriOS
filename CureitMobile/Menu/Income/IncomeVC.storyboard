@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--IncomeVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="IncomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="IncomeVC" customModule="CureitMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dv-TL-PZB">
+                                <rect key="frame" x="15" y="74" width="50" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                    <color key="baseForegroundColor" red="0.039215686270000001" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WiH-f2-kA7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSB-Ce-Vum">
+                                <rect key="frame" x="165.66666666666666" y="74" width="62" height="34.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gk4-Z1-aB0">
+                                <rect key="frame" x="15" y="128.33333333333331" width="363" height="674.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="AppBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gk4-Z1-aB0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="Fee-e9-ydK"/>
+                            <constraint firstItem="6dv-TL-PZB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="XU1-qu-HIn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gk4-Z1-aB0" secondAttribute="trailing" constant="15" id="ehN-31-ynP"/>
+                            <constraint firstItem="cSB-Ce-Vum" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="hmQ-Gz-Etv"/>
+                            <constraint firstItem="cSB-Ce-Vum" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="hzi-Mb-JNt"/>
+                            <constraint firstItem="cSB-Ce-Vum" firstAttribute="centerY" secondItem="6dv-TL-PZB" secondAttribute="centerY" id="pWq-p6-JAA"/>
+                            <constraint firstItem="6dv-TL-PZB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="rgr-vu-ggK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Gk4-Z1-aB0" secondAttribute="bottom" constant="15" id="suG-Mn-GPn"/>
+                            <constraint firstItem="Gk4-Z1-aB0" firstAttribute="top" secondItem="6dv-TL-PZB" secondAttribute="bottom" constant="20" id="uGY-1X-dXN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backBtn" destination="6dv-TL-PZB" id="hHp-1J-zuB"/>
+                        <outlet property="tableView" destination="Gk4-Z1-aB0" id="Eml-jj-kbu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
+        <namedColor name="AppBackgroundColor">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
