@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettledTableViewCell" rowHeight="77" id="KGk-i7-Jjw" customClass="SettledTableViewCell" customModule="CureitMobile" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnC-Zm-5Og">
+                        <rect key="frame" x="0.0" y="3" width="320" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order#: 2234551" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yae-iA-TaX">
+                                <rect key="frame" x="10" y="14.999999999999998" width="125" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Total: ₹300" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAu-NQ-hdl">
+                                <rect key="frame" x="9.9999999999999929" y="39.333333333333336" width="115.33333333333331" height="15.666666666666664"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.039215686270000001" green="0.58823529409999997" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2d-2w-nJL">
+                                <rect key="frame" x="286" y="20" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="9ag-Ay-cX0"/>
+                                    <constraint firstAttribute="height" constant="24" id="kUb-rW-xHk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="chevron.right" catalog="system" symbolScale="medium"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yae-iA-TaX" firstAttribute="top" secondItem="SnC-Zm-5Og" secondAttribute="top" constant="15" id="M5n-3y-KY7"/>
+                            <constraint firstItem="t2d-2w-nJL" firstAttribute="top" secondItem="SnC-Zm-5Og" secondAttribute="top" constant="20" id="Nmm-mJ-7xL"/>
+                            <constraint firstItem="Yae-iA-TaX" firstAttribute="leading" secondItem="SnC-Zm-5Og" secondAttribute="leading" constant="10" id="Oen-QP-AR6"/>
+                            <constraint firstItem="TAu-NQ-hdl" firstAttribute="leading" secondItem="Yae-iA-TaX" secondAttribute="leading" id="cZr-mS-0lI"/>
+                            <constraint firstAttribute="trailing" secondItem="t2d-2w-nJL" secondAttribute="trailing" constant="10" id="o7d-gr-L3W"/>
+                            <constraint firstItem="TAu-NQ-hdl" firstAttribute="top" secondItem="Yae-iA-TaX" secondAttribute="bottom" constant="5" id="yfW-LN-z06"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.9529411792755127" green="0.9529411792755127" blue="0.9529411792755127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="SnC-Zm-5Og" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="25c-vG-hrS"/>
+                    <constraint firstAttribute="bottom" secondItem="SnC-Zm-5Og" secondAttribute="bottom" constant="3" id="PF5-Zp-1Gi"/>
+                    <constraint firstAttribute="trailing" secondItem="SnC-Zm-5Og" secondAttribute="trailing" id="kWB-Yd-bhR"/>
+                    <constraint firstItem="SnC-Zm-5Og" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="vG9-s8-b5h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="orderIdLbl" destination="Yae-iA-TaX" id="dej-8g-2Ka"/>
+                <outlet property="orderTotalAmountLbl" destination="TAu-NQ-hdl" id="Efc-Ry-BPL"/>
+            </connections>
+            <point key="canvasLocation" x="39.694656488549619" y="-1.0563380281690142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

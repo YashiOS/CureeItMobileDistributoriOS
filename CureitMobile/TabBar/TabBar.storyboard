@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar-->
+        <scene sceneID="TYM-C4-NAG">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXH-eU-4A0" customClass="TabBar" customModule="CureitMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xce-4e-uLQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.40784313729999999" green="0.60392156860000001" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="umi-Xd-7j7" kind="relationship" relationship="viewControllers" id="xoX-FD-3tg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gf-rd-xR8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1176" y="-1013"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="nQI-yr-eFu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeVC" referencedIdentifier="HomeVC" id="umi-Xd-7j7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Incoming " image="incoming" landscapeImage="incoming" largeContentSizeImage="incoming" id="0Fj-na-ddD">
+                        <color key="badgeColor" red="0.074509803920000006" green="0.72156862749999995" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="aIi-a5-Yj9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0v0-t1-wAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-409" y="-1244"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="incoming" width="29" height="28"/>
+    </resources>
+</document>

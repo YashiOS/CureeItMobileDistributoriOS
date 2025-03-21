@@ -1,0 +1,6 @@
+framework module Pods_CureitMobile {
+  umbrella header "Pods-CureitMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
