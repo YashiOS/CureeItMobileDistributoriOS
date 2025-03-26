@@ -45,6 +45,9 @@
                                     <imageReference key="image" image="chevron.right" catalog="system" symbolScale="medium"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="orderDetailsbtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gin-9R-dEB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -69,6 +72,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="mainView" destination="a47-TV-fAK" id="cop-Pn-WB8"/>
+                <outlet property="orderIdLbl" destination="Mqn-M7-Dqx" id="kKc-Gq-o1f"/>
+                <outlet property="orderTotalLbl" destination="If8-xq-ndy" id="eOQ-Kf-q2U"/>
             </connections>
             <point key="canvasLocation" x="82.44274809160305" y="0.0"/>
         </tableViewCell>

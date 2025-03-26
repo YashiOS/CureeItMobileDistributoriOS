@@ -12,24 +12,39 @@ class NetworkManager {
     static let shared = NetworkManager()
     private let baseURL = "http://ec2-13-60-8-94.eu-north-1.compute.amazonaws.com:3000/"
     
+    
     func sendRequest<T: Decodable>(
         endpoint: String,
-        method: HTTPMethod = .post,
-        requestBody: Encodable,
+        method: HTTPMethod = .get,
+        parameters: [String: Any]? = nil,
+        requestBody: Encodable? = nil,
+        headers: HTTPHeaders? = nil,
         responseType: T.Type,
         completion: @escaping (Result<T, Error>) -> Void
     ) {
-        let url = "\(baseURL)/\(endpoint)"
-
-        guard let bodyData = try? JSONEncoder().encode(requestBody) else {
-            completion(.failure(AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: NSError()))))
-            return
-        }
+        let url = "\(baseURL)\(endpoint)"
         
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = method.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = bodyData
+        
+        if let headers = headers {
+            headers.forEach { request.setValue($0.value, forHTTPHeaderField: $0.name) }
+        }
+        
+        if let requestBody = requestBody {
+            guard let bodyData = try? JSONEncoder().encode(requestBody) else {
+                completion(.failure(AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: NSError()))))
+                return
+            }
+            request.httpBody = bodyData
+        } else if let parameters = parameters {
+            guard let bodyData = try? JSONSerialization.data(withJSONObject: parameters) else {
+                completion(.failure(AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: NSError()))))
+                return
+            }
+            request.httpBody = bodyData
+        }
         
         AF.request(request)
             .validate()
@@ -37,12 +52,12 @@ class NetworkManager {
                 switch response.result {
                 case .success(let value):
                     completion(.success(value))
-                    
                 case .failure(let error):
                     completion(.failure(error))
                 }
             }
     }
+    
     
     func sendRawJSON<T: Decodable>(
         endpoint: String,
@@ -92,7 +107,7 @@ class NetworkManager {
         )
         .validate()
         .responseData { response in
-
+            
             if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
             }
             
@@ -102,7 +117,7 @@ class NetworkManager {
                     let decodedResponse = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(decodedResponse))
                 } catch {
-
+                    
                     completion(.failure(error))
                 }
             } else if let error = response.error {

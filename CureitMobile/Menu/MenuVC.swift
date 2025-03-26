@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SVProgressHUD
 
 class MenuVC: UIViewController {
     @IBOutlet weak var backBtn: UIButton!
@@ -71,6 +72,11 @@ extension MenuVC: UITableViewDelegate, UITableViewDataSource {
         } else if menuItems[indexPath.row].title == "Profile" {
             let storyboard = UIStoryboard(name: "ProfileVC", bundle: nil)
             let nextVC = storyboard.instantiateViewController(withIdentifier: "ProfileVC")
+            nextVC.modalPresentationStyle = .fullScreen
+            self.present(nextVC, animated: true)
+        } else if menuItems[indexPath.row].title == "Call Customer Care" {
+            let storyboard = UIStoryboard(name: "CustomerCareVC", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "CustomerCareVc")
             nextVC.modalPresentationStyle = .fullScreen
             self.present(nextVC, animated: true)
         }

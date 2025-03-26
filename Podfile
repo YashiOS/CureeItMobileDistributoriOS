@@ -6,6 +6,9 @@ target 'CureitMobile' do
   use_frameworks!
 
 	pod 'Alamofire', '~> 5.6'
+	pod 'SDWebImage'
+	pod 'SVProgressHUD'
+
   # Pods for CureitMobile
 
 end

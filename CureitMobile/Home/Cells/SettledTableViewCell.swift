@@ -7,6 +7,9 @@
 
 import UIKit
 
+protocol SettledTableViewDelegate: AnyObject {
+    func presentOrderDetailsVC(settledData: SettledDetailModel)
+}
 class SettledTableViewCell: UITableViewCell {
     @IBOutlet weak var orderTotalAmountLbl: UILabel!
     @IBOutlet weak var orderIdLbl: UILabel!
@@ -15,6 +18,8 @@ class SettledTableViewCell: UITableViewCell {
             configureCell()
         }
     }
+    
+    weak var delegate: SettledTableViewDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,4 +32,7 @@ class SettledTableViewCell: UITableViewCell {
         self.orderTotalAmountLbl.text = viewModel.totalAmount
     }
     
+    @IBAction func orderDetailsAction(_ sender: Any) {
+        self.delegate?.presentOrderDetailsVC(settledData: self.viewModel!.settledData)
+    }
 }

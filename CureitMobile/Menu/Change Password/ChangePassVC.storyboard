@@ -95,6 +95,21 @@
                                     <constraint firstAttribute="height" constant="54" id="hkS-r5-Nbh"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d37-z5-xeL">
+                                <rect key="frame" x="59" y="768" width="275" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="BdD-sq-6s7"/>
+                                    <constraint firstAttribute="height" constant="60" id="Xhx-1U-yHu"/>
+                                </constraints>
+                                <color key="tintColor" red="0.039215687662363052" green="0.58823531866073608" blue="0.50980395078659058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confirm">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="confirmBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rjl-Hs-IbM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="AppBackgroundColor"/>
@@ -102,7 +117,9 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="v9w-Kk-0KN" secondAttribute="trailing" constant="30" id="0Iq-tX-uJU"/>
                             <constraint firstItem="Q1O-gu-OUt" firstAttribute="top" secondItem="wIr-gq-jgH" secondAttribute="bottom" constant="20" id="2Hr-lm-msm"/>
                             <constraint firstItem="Z69-hB-xdV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="5FS-E7-cYf"/>
+                            <constraint firstItem="d37-z5-xeL" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="10" id="F5P-Yh-FCg"/>
                             <constraint firstItem="wIr-gq-jgH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="Fll-5G-UQX"/>
+                            <constraint firstItem="d37-z5-xeL" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Hof-zH-al8"/>
                             <constraint firstItem="wIr-gq-jgH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="JbF-U2-iPf"/>
                             <constraint firstItem="NKg-3W-rzU" firstAttribute="top" secondItem="DCu-oz-N0r" secondAttribute="bottom" constant="20" id="LtY-E6-tAw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Z69-hB-xdV" secondAttribute="trailing" constant="30" id="SdP-NA-S7M"/>
@@ -119,6 +136,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmBt" destination="d37-z5-xeL" id="jS3-k6-YNw"/>
                         <outlet property="currentPasswordTFView" destination="Z69-hB-xdV" id="cvO-22-5bl"/>
                         <outlet property="currentTF" destination="OmH-7c-W8i" id="FGQ-mf-QRo"/>
                         <outlet property="newPassTF" destination="T4A-b5-gke" id="hLT-GH-wnu"/>

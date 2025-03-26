@@ -140,6 +140,7 @@
                         <outlet property="backBtn" destination="6dv-TL-PZB" id="hHp-1J-zuB"/>
                         <outlet property="endDateBtn" destination="VB5-MW-HFd" id="OAl-J1-CaM"/>
                         <outlet property="endDateView" destination="fbO-sX-ruI" id="xug-v8-et2"/>
+                        <outlet property="incomeLbl" destination="3n3-jw-fF8" id="9bt-Tx-3Oy"/>
                         <outlet property="startDateBtn" destination="sOS-m0-amH" id="tBQ-Q2-nF3"/>
                         <outlet property="startDateView" destination="1pn-fV-63s" id="snY-fo-h31"/>
                         <outlet property="tableView" destination="Gk4-Z1-aB0" id="Eml-jj-kbu"/>

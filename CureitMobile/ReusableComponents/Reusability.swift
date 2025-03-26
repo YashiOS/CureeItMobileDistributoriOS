@@ -42,3 +42,19 @@ struct IncomeData {
     let date: String
     let entries: [String]
 }
+
+func formatDateString(_ dateString: String, fromFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSSZ", toFormat: String = "dd MMM yyyy") -> String? {
+    let inputFormatter = DateFormatter()
+    inputFormatter.dateFormat = fromFormat
+    inputFormatter.timeZone = TimeZone(abbreviation: "UTC")
+
+    let outputFormatter = DateFormatter()
+    outputFormatter.dateFormat = toFormat
+    outputFormatter.timeZone = TimeZone(identifier: "Asia/Kolkata")
+
+    if let date = inputFormatter.date(from: dateString) {
+        return outputFormatter.string(from: date)
+    }
+    
+    return nil
+}

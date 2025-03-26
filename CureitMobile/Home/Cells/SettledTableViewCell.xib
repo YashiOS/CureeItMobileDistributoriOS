@@ -44,6 +44,9 @@
                                     <imageReference key="image" image="chevron.right" catalog="system" symbolScale="medium"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="orderDetailsAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="f3E-SJ-8RR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
